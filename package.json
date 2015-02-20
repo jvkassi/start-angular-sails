@@ -87,7 +87,7 @@
     "url": "git://github.com/jekas/snapchat.git"
   },
   "engines": {
-    "node": "0.10.35",
+    "node": "0.12",
     "npm": "2.3.0"
   },
   "author": "Jean-Vincent Kassi <jean.kassi@smile.ci>",
