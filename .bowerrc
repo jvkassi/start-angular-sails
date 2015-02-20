@@ -1,0 +1,10 @@
+{
+  "directory": "assets/vendor",
+    "analytics": false,
+
+    "storage": {
+      "packages": ".bower-cache",
+      "registry": ".bower-registry"
+    },
+    "tmp": ".bower-tmp"
+}
