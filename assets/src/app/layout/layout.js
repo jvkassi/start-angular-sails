@@ -11,7 +11,7 @@
        * @ngInject
        * 
        */
-    function config($mdThemingProvider, $stateProvider) {
+    function config($stateProvider) {
         // snap provider 
         // disable right snap
         $stateProvider.state('root', {

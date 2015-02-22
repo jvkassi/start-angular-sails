@@ -19,28 +19,6 @@ video {
     width: 100%;
     text-align: left !important;
 }
-md-list md-item:first-child {
-    margin-left: 0;
-    padding-left: 0;
-}
-.my-card {
-    float: left;
-    padding: 0 6px;
-    margin: 5px;
-}
-md-divider {
-    height: 100px;
-    border-left: 1px solid;
-}
 .selected i {
     color: #2196f3;
-}
-#login {
-    padding: 15px;
-}
-.text-white {
-    color: white;
-}
-[layout-fill] {
-    height: 100%;
 }

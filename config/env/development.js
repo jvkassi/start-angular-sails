@@ -55,15 +55,6 @@ module.exports = {
             // waitForConnections: false,
             pool: false
         },
-        awsdb: {
-            adapter: 'sails-mysql',
-            host: 'devdb.c249i99bv9ix.us-west-2.rds.amazonaws.com',
-            user: 'snap',
-            password: 'L17VpL2kzV',
-            database: 'snaps'
-
-        }
-
     },
     models: {
         // alter database, at least trying
@@ -71,21 +62,21 @@ module.exports = {
         connection: 'localdb',
         schema: true
     },
-    sockets: {
-        adapter: 'redis',
-        host: '127.0.0.1',
-        port: 6399,
-        db: 'sails',
-        // pass: '<redis auth password>'
+    // sockets: {
+    //     adapter: 'redis',
+    //     host: '127.0.0.1',
+    //     port: 6399,
+    //     db: 'sails',
+    //     // pass: '<redis auth password>'
 
-    },
-    session: {
-        adapter: 'redis',
-        host: 'localhost',
-        port: 6399,
-        db: 'sails',
-        prefix: 'sess:'
+    // },
+    // session: {
+    //     adapter: 'redis',
+    //     host: 'localhost',
+    //     port: 6399,
+    //     db: 'sails',
+    //     prefix: 'sess:'
 
-    }
+    // }
 
 };
