@@ -1,0 +1,66 @@
+<md-content md-scroll-y flex="" class="md-padding ">
+    <section layout="row">
+        <md-input-container>
+            <label> Recherche</label>
+            <input ng-model="search.$">
+        </md-input-container>
+        <span flex></span>
+        <md-button aria-label="refresh" ng-click="reload()">
+            <i class="md-1x md-refresh"></i>
+        </md-button>
+        <md-button aria-label="add" ng-click="add($event)">
+            <i class="md-1x md-group-add"></i>
+        </md-button>
+        <md-button aria-label="view">
+            <i class="md-1x md-view-list"></i>
+        </md-button>
+        <md-button aria-label="sort">
+            <i class="md-1x md-sort"></i>
+        </md-button>
+    </section>
+    <md-list layout="row" layout layout-wrap layout-align="space">
+        <md-card flex-md="30" flex-sm="95" flex-gt-sm="50" flex-gt-md="25" class=" my-card" ng-click="select(p)" ng-repeat="p in snaps | filter:search " layout-margin>
+            <!-- <md-divider></md-divider> -->
+            <div class="md-tile-content">
+                <!-- {{p}} -->
+                <h3>{{p.name}}</h3>
+                <img  ng-show="p.m == 0" ng-src="{{p.fPath}}" ng-attr-test="{{p.fPath}}">
+                <video ng-show="p.m == 1"  controls>
+                    <source type="video/mp4" embedSrc="{{p.fPath}}" ng-attr-src="{{trustSrc(p.fPath)}}">
+                </video>
+
+            </div>
+            <md-button href ng-click="postToStory(p.id)" class="md-primary">Post</md-button>
+            </md-card>
+    </md-list>
+    <md-content ng-if="!snaps" layout-align="center center" layout="row">
+        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+    </md-content>
+</md-content>
+<md-sidenav class="md-sidenav-right md-whiteframe-z2 " md-component-id="right">
+    <md-toolbar class="">
+        <div class="md-toolbar-tools">
+            <label>Détails</label>
+            <label flex></label>
+            <md-button aria-label="hide details" hide-gt-md class="text-white" ng-click="closeInfo()">
+                <i class="md-close"></i>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-content ng-show="s" class="md-padding  info" layout="column">
+        <div class="left">
+            <md-button aria-label="save" type="submit" ng-click="save()" aria="Save">
+                <i class="md-1x md-save"></i>
+            </md-button>
+            <md-button aria-label="remove " ng-click="remove($event)" aria="delete">
+                <i class="md-1x md-delete"></i>
+            </md-button>
+        </div>
+        <div>
+            <md-input-container flex>
+                <label> Nom</label>
+                <input ng-model="n.name">
+            </md-input-container>
+        </div>
+    </md-content>
+</md-sidenav>

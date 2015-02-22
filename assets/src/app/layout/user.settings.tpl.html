@@ -1,0 +1,23 @@
+<md-dialog>
+    <md-toolbar  class="">
+        <div class="md-toolbar-tools" tabindex="0">
+            <h2 flex="" class="ng-binding">Paramètres</h2>
+            <button class="text-white md-button md-indigo-theme" ng-click="hideSettings()" aria-label="Logoff">
+                <i class="md-2x md-close ng-scope"></i>
+            </button>
+        </div>
+    </md-toolbar>
+    <md-content class="md-padding" layout-row="column">
+        <form name="userSettings" role="form">
+            <md-input-group>
+                <md-text-float flex required label="Entreprise" maxlength="11" ng-model="user.company"></md-text-float>
+            </md-input-group>
+            <div ng-show="!userSettings.$valid">
+                <span class="text-error message">Ce champ doit etre inferier ou egale a 11</span>
+                <br/>
+            </div>
+            <br/>
+            <md-button aria-label="save" type="submit" ng-disabled="!userSettings.$valid" type="submit" class="md-primary md-raised" ng-click="save()">Valider</md-button>
+        </form>
+    </md-content>
+</md-dialog>
