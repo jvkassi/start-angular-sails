@@ -13,8 +13,8 @@
         .factory('Req', Req);
 
     function Req($sails, $http) {
-        var self = this;
 
+        // var self = this;
 
         if ($sails.connected) {
             return $sails;

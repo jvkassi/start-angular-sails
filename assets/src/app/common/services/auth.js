@@ -13,9 +13,6 @@
     function Auth($sails, $http, Generic, Api, Req) {
         var self = this;
 
-        // fallback on $http if sails ain't connected
-        function AuthBase() {};
-        
 
         self.model = "auths/";
         var AuthBase = new Generic(self.model);

@@ -13,8 +13,7 @@
         .service('Account', Account);
 
     function Account(Api,Req, Generic) {
-        var self = this;
-
+ 
         var self = this;
         self.model = "accounts/";
         var Base = new Generic(self.model);

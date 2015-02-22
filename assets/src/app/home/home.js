@@ -10,7 +10,7 @@
      * @ngInject
      *
      */
-    function config($stateProvider, $locationProvider) {
+    function config($stateProvider) {
         // $locationProvider.html5Mode(true);
         $stateProvider.state('root.app.home', {
             url: '/',

@@ -11,12 +11,8 @@
    * @ngInject
    *
    */
-  function HomeCtrl($state, $timeout) {
-    var vm = this;
-    vm.ctrlName = 'HomeCtrl';  // $timeout(function() {
-                               // $state.transitionTo('root.login');
-                               // console.log('change');
-                               // }, 1000);
+  function HomeCtrl() {
+
   }
   angular.module('home').controller('HomeCtrl', HomeCtrl);
 }());

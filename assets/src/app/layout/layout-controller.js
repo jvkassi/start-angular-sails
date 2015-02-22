@@ -12,7 +12,7 @@
      *
      */
     function LayoutCtrl($scope, $state, $mdDialog, Auth, User, $mdSidenav) {
-        var vm = this;
+        
         $scope.$state = $state;
         $scope.User = User;
         
@@ -37,7 +37,7 @@
             // .finally($scope.reload);
         };
 
-        $scope.hideSettings = function($event) {
+        $scope.hideSettings = function() {
             $mdDialog.hide();
         };
 
@@ -60,7 +60,7 @@
         $scope.reload();
 
         $scope.logout = function() {
-            Auth.logout().success(function(data) {
+            Auth.logout().success(function() {
                 $state.go('root.login');
             });
         };

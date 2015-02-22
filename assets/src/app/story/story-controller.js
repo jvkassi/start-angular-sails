@@ -16,7 +16,7 @@
     var vm = this;
     vm.ctrlName = 'StoryCtrl';
 
-    Story.filter($stateParams.id)
+    Story.filter($stateParams.id);
   }
 
 })();

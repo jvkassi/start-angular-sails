@@ -39,7 +39,7 @@ module.exports = function(gulp, plugins, growl) {
 
     gulp.task('concat:vendor:js', function() {
 
-        var 
+        var
             stream = plugins.streamqueue({
                 objectMode: true
             }),
@@ -77,7 +77,9 @@ module.exports = function(gulp, plugins, growl) {
         return stream.done()
             .pipe(plugins.autoprefixer('last 2 version', 'safari 5', 'ie 10', 'opera 12.1', 'ios 6', 'android 4'))
             .pipe(plugins.concat('vendor.css'))
-            .pipe(plugins.cssmin())
+            .pipe(plugins.cssmin({
+                keepSpecialComments: 0
+            } ))
             .pipe(plugins.rev())
             .pipe(gulp.dest('.tmp/public/styles'))
             .pipe(plugins.if(growl, plugins.notify({

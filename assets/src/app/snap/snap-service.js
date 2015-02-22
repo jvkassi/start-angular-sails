@@ -12,7 +12,7 @@
      */
     function Snap(Generic, User, Api, Req) {
 
-        var self = this;
+        // var self = this;
         var Base = new Generic('snaps/');
 
         Base.postToStory = function postToStory(id) {

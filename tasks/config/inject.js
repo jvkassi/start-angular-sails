@@ -78,7 +78,7 @@ module.exports = function(gulp, plugins, growl) {
             .pipe(plugins.inject(
                 gulp.src('.tmp/public/{scripts,styles}/vendor*', {
                     read: false
-                }).pipe(plugins.angularFilesort()), {
+                }), {
                     starttag: '<!-- bower:{{ext}} -->',
                     endtag: '<!-- endbower -->',
                     ignorePath: '.tmp/public'
@@ -98,7 +98,7 @@ module.exports = function(gulp, plugins, growl) {
             .pipe(plugins.inject(
                 gulp.src('.tmp/public/{scripts,styles}/app*', {
                     read: false
-                }).pipe(plugins.angularFilesort()), {
+                }), {
                     ignorePath: '.tmp/public'
                 }))
 

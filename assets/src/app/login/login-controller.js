@@ -16,7 +16,7 @@
         $scope.authenticate = function() {
             Auth.login($scope.user).success(function(data) {
                     console.log(data);
-                    if (typeof(data.errors) == "undefined") {
+                    if (typeof(data.errors) === "undefined") {
 
                         $state.go('root.app.snap');
                     } else {
@@ -31,8 +31,8 @@
                       $mdToast.show($mdToast.simple()
                         .content(err.errors[0])
                         .position("top right")
-                    )
-                })
+                    );
+                });
                 // console.log($scope.user);
         };
     }

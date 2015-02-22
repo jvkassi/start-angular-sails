@@ -20,7 +20,7 @@
 
         $scope.trustSrc = function(src) {
             return $sce.trustAsResourceUrl(src);
-        }
+        };
 
         $scope.reload = function() {
 
@@ -29,7 +29,7 @@
                 $scope.snaps = data;
                 console.log("snaps reloaded");
                 // $mdSidenav('right').toggle();
-            })
+            });
 
         };
 
@@ -43,7 +43,7 @@
                     .position("top right")
                 );
                 return 0;
-            })
+            });
         };
 
         $scope.reload();

@@ -20,7 +20,7 @@
         this.model = null;
         var GenericBase = function(model, id) {
             self = this;
-            if (typeof(id) != "undefined") {
+            if (typeof(id) !== "undefined") {
 
                 this.filter = "?user=" + id;
                 this.extend = {
@@ -70,7 +70,7 @@
         };
         GenericBase.prototype.filter = function filter() {
             return Req.get(Api + this.model);
-        }
+        };
         GenericBase.prototype.on = function on(event, cb) {
             Req.on(event, cb);
         };

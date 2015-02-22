@@ -36,17 +36,17 @@
             BUTTON_LANG_DE: 'deutsch'
         });
         $translateProvider.preferredLanguage('fr');
-        // $httpProvider.interceptors.push(function() {
-        //     return {
+        $httpProvider.interceptors.push(function() {
+            return {
 
-        //         'response': function(response) {
-        //             // same as above
-        //             // response.data.req = "http";
-        //             return response;
-        //         }
+                'response': function(response) {
+                    // same as above
+                    // response.data.req = "http";
+                    return response;
+                }
 
-        //     };
-        // });
+            };
+        });
     }
 
     function run($rootScope, $state, Auth, User) {
