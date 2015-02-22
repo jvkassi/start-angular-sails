@@ -85,7 +85,7 @@ function _install_nodejs() {
    #    http://nodejs.org/dist/v0.8.9/node-v0.8.9-linux-x64.tar.gz
    #    http://nodejs.org/dist/v0.9.1/node-v0.9.1-linux-x64.tar.gz
    zfile="node-v${ver}-linux-x64.tar.gz"
-   zlink="http://nodejs.org/dist/v${ver}/${zfile}"
+   zlink="http://nodejs.org/v${ver}/${zfile}"
 
    instdir="$(get_node_install_dir)"
 

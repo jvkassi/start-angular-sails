@@ -63,7 +63,6 @@
     "run-sequence": "^1.0.0",
     "s3-write-stream": "git://github.com/mib4fun/s3-write-stream",
     "sails": "^0.11.0-rc5",
-    "sails-disk": "^0.10.7",
     "sails-hook-autoreload": "^0.11.2",
     "sails-mysql": "^0.10.8",
     "snapchat": "git://github.com/mib4fun/node-snapchat",
@@ -79,8 +78,7 @@
   "description": "snapchat app in nodejs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=production node app.js",
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "start": "NODE_ENV=production node app.js"
   },
   "repository": {
     "type": "git",
